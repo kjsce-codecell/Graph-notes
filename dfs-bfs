@@ -72,3 +72,41 @@ int main()
   cout<<endl;
   return 0;
 }
+
+//OUTPUT
+
+/*
+
+Enter no of nodes in a graph 5
+Enter no of adjacent nodes
+ 3
+Enter the adjacent nodes
+ 2
+ 3
+ 5
+Enter no of adjacent nodes
+ 3
+Enter the adjacent nodes
+ 1
+ 4
+ 5
+Enter no of adjacent nodes
+ 1
+Enter the adjacent nodes
+ 1
+Enter no of adjacent nodes
+ 1
+Enter the adjacent nodes
+ 2
+Enter no of adjacent nodes
+ 2
+Enter the adjacent nodes
+ 1
+ 2
+Enter the starting node: 1
+DFS Traversal:
+1 2 4 5 3 
+BFS Traversal:
+1 2 3 5 4 
+
+*/
