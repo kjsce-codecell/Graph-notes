@@ -105,8 +105,8 @@ Enter the adjacent nodes
  2
 Enter the starting node: 1
 DFS Traversal:
-1 2 4 5 3 
+1 2 4 5 3
 BFS Traversal:
-1 2 3 5 4 
+1 2 3 5 4
 
 */
