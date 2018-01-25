@@ -13,9 +13,9 @@ So, our 2-d array looks like this:
 ```cpp
 	graph[][]={
                 {0 , INF , -2 , INF},
-                {4 , INF , 3 , INF},	   //1 to 0 is INF because the graph is directed from 0 to 1 and not 1 to 0
-                {INF , INF , INF , 2},
-                {-1 , INF , INF , INF}
+                {4 , 0 , 3 , INF},	   //1 to 0 is INF because the graph is directed from 0 to 1 and not 1 to 0
+                {INF , INF , 0 , 2},
+                {INF , -1 , INF , 0}
              }
 ```
 
