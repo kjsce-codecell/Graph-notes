@@ -12,7 +12,7 @@ We hope it will help you understand graphs better and make it possible for you t
 ## Content
 ------------------------------------------
 
-* [Introduction](./Intro2Graphs.md)
+* [Introduction](./Graphs.md)
 * [Algorithms](./Algorithms)
   * [Dijkstra](./Algorithms/dijkstra.cpp)
   * [Floyd Warshall](./Algorithms/Floyd_Warshall.cpp)
