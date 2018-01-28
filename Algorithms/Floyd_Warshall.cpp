@@ -1,68 +1,60 @@
-//  Author : chaitya_62
 #include<bits/stdc++.h>
+#define INF 999
+#define n 4
 
-vector< pair<uii,uii> > G[SIZE];
-vector< pair<uii,uii> > ::iterator it;
-uii dist[SIZE][SIZE];
-void addEdge(uii a, uii b, uii w){
-	G[a].push_back(make_pair(w,b));
-	G[b].push_back(make_pair(w,a));
-	return;
-}
-void addDirectedEdge(uii a, uii b, uii w){
-	G[a].push_back(make_pair(w,b));
-	return;
-}
-void printGraph(uii N){
-	vector< pair<uii,uii> > ::iterator it;
-	for(uii i = 1;i<=N;i++){
-		for(it= G[i].begin();it!=G[i].end();it++){
-			cout<<i<<" ---> "<<it->second<<" W: "<<it->first<<endl;
-		}
-	}
-	return;
+using namespace std;
 
-}
-void floyd_warshall(uii N){
-	for(uii i = 1;i<=N;i++){
-		for(uii j = 1;j<=N;j++){
-			if(i == j) dist[i][j] = 0;
-			else dist[i][j] = INF;
+int fwgraph(int graph[n][n]) {
+	int k, shortdist[n][n],i,j;
+	for(i=0;i<n;i++) {
+		for(j=0;j<n;j++) {
+			shortdist[i][j]=graph[i][j];
+ 			//we initially define the shortest distance the same as the input distances, considering no intermediate vertices
 		}
 	}
-	for(uii i = 1;i<=N;i++){
-		for(it = G[i].begin();it!=G[i].end();it++){
-			dist[i][it->second] = it->first;
-		}
-	}
-	for(uii i = 1;i<=N;i++){
-		for(uii j = 1;j<=N;j++){
-			for(uii k = 1;k<=N;k++){
-				if(dist[j][i]!= INF && dist[i][k]!=INF)
-				dist[j][k] = min(dist[j][k],dist[j][i]+dist[i][k]);
+	
+	//We now consider all intermediate vertices uptil n,
+	for(k=0;k<n;k++) {
+		for(i=0;i<n;i++) {
+			for(j=0;j<n;j++) {
+				if(graph[i][k]+graph[k][j]<graph[i][j]) {
+					shortdist[i][j]=graph[i][k]+graph[k][j];
+				}
 			}
-
 		}
+	}
+
+	print(shortdist);
+}
+
+int print(int shortdist[n][n]) {
+	int i,j;
+	cout<<" The following elements show the shortest distance b/w the respective vertices: "<<endl;
+	for(i=0;i<n;i++) {
+		for(j=0;j<n;j++) {
+			if(shortdist[i][j]==INF) 
+				cout<<" INF ";
+			else 
+				cout<<" "<<shortdist[i][j]<<" ";
+		}
+		cout<<endl;
 	}
 
 }
-int main(){
-     	/*Simple test */
-	addEdge(1,2,10);
-	addEdge(2,3,10);
-	addEdge(1,4,2);
-	addEdge(2,4,1);
-	printGraph(4);
-	floyd_warshall(4);
-   	cout<<"distances"<<endl;
-	for(uii i = 1;i<=4;i++){
-		for(uii j = 1;j<=4;j++){
-			cout<<i<<" ---> "<<j<<"  : "<<dist[i][j]<<endl;
-		}
-	}
-
-
-
-
+int main() {
+	int graph[n][n]={ 
+				{0 , 3 , INF , 10},
+		      	{INF , 0 , 5 , INF},
+		        {INF , INF , 0 , 7},
+		      	{INF , INF , INF , 0}
+		      	};
+	fwgraph(graph);
 	return 0;
 }
+
+/*The output given by this will be:
+The following elements show the shortest distance b/w the respective vertices:
+ 0  3  8  10
+ INF  0  5  12
+ INF  INF  0  7
+ INF  INF  INF  0*/
