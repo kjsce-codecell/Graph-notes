@@ -22,5 +22,5 @@ We hope it will help you understand graphs better and make it possible for you t
 * [Problems](./Problems)
   * [Discount on crackers](https://www.codechef.com/problems/ACM14KG3) | [Solution](https://github.com/KJSCE-Codecell/Graph-notes/blob/master/Problems/ACM14KG3.cpp)
   * [Skiing](https://www.codechef.com/problems/SKIING) | [Solution](https://github.com/KJSCE-Codecell/Graph-notes/blob/master/Problems/SKIING.cpp)
-  * [fillmtr](https://www.codechef.com/problems/FILLMTR) | [Solution](./Problems/fillmtr.cpp)
-
+  * [Bear and Clique Distances](https://www.codechef.com/problems/CLIQUED) | [Solution](./Problems/CLIQUED.cpp)
+  * [Fill The Matrix](https://www.codechef.com/problems/FILLMTR) | [Solution](./Problems/fillmtr.cpp)
