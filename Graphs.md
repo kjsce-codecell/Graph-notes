@@ -7,14 +7,16 @@ They can range in difficulty from finding a path on a 2D grid from a start locat
 Graphs can represent many different types of systems, from a two-dimensional grid,to a map of the internet that shows how long it takes data to move from computer A to computer B. We first need to define what components a graph consists of.
 In fact there are only two, nodes and edges.
 * A **node** (or vertex) is a discrete position in the graph.
-* An **edge** (or connection) is a link between two vertices that can be either directed or undirected and may have a cost associated with it.
+* An **edge** (or connection) is a link between two vertices (**node**) that can be either **directed** or **undirected** and may have a cost associated with it.
 * An **undirected edge** means that there is no restriction on the direction you can travel along the edge.
 So for example, if there were an undirected edge from A to B you could move from A to B or from B to A.
 * A **directed edge** only allows travel in one direction, so if there were a directed edge from A to B you could travel from A to B, but not from B to A.
-An easy way to think about edges and vertices is that edges are a function of two vertices that returns a cost.
-> For those that are used to the mathematical description of graphs <br>
-> A graph G = {V, E} is defined as a set of vertices, V, and a collection of edges (which is not necessarily a set), E.
-> An edge can then be defined as (u, v) where u and v are elements of V.
+* A **weighted edge** is an edge **directed** or **undirected** which has a cost associated with it. The cost can have many different meaning.
+
+   An easy way to think about edges and vertices is that edges are a function of two vertices that returns a cost.
+   For those who are mathematically inclined <br>
+   A graph G = {V, E} is defined as a set of vertices, V, and a collection of edges (which is not necessarily a set), E.
+   An edge can then be defined as (u, v) where u and v are elements of V.
 
 ## Representing a graph
 
