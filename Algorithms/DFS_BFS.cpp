@@ -1,17 +1,30 @@
 #include<bits/stdc++.h>
+#define MAX 100001
 using namespace std;
 
-vector<int> v[100001];
-int visited[100001]={0};
 
-void dfs(int start)
-{
+// intializing the graph 
+vector<int> v[MAX];
+
+// intializing the visited array
+int visited[MAX]={0};
+
+void dfs(int start){
+  
+  
   cout<<start<<" ";
+  
+  // mark the current node as visited
   visited[start]=1;
+  
   for(int i=0;i<v[start].size();i++)
   {
+    
+    // loop through all the nodes connected to current node
+    // if the node is not alreay marked visit it 
     if(!visited[v[start][i]])
     {
+      
       dfs(v[start][i]);
     }
   }
@@ -19,22 +32,38 @@ void dfs(int start)
 
 void bfs(int start)
 {
+  
+  
   int current;
   queue<int> q;
+  
+  // push the source node to the queue
   q.push(start);
+  
+  // loop till the queue is empty
   while(q.size()!=0)
   {
+    
+    // set current node to the first node in the queue
     current = q.front();
     q.pop();
+    
+    // if current node isn't marked already visit it
     if(!visited[current])
     {
       cout<<current<<" ";
       visited[current]=1;
     }
+    
     for(int i=0;i<v[current].size();i++)
     {
+      
+      
+   
       if(!visited[v[current][i]])
       {
+        
+        // push all nodes adjacent to the current node to the queue
         cout<<v[current][i]<<" ";
         visited[v[current][i]]=1;
         q.push(v[current][i]);
