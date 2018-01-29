@@ -15,10 +15,10 @@ We hope it will help you understand graphs better and make it possible for you t
 ------------------------------------------
 
 * [Introduction](./Graphs.md)
-* [Algorithms](./Algorithms)
-  * [Dijkstra](./Algorithms/dijkstra.cpp)
+* [Algorithms](./Algorithms)	
+  * [DFS & BFS](./Algorithms/dfs_bfs.cpp) | [notes](./Algorithms/dfs_bfs.md)
+  * [Dijkstra](./Algorithms/dijkstra.cpp) | [notes](./Algorithms/dijkstra.md)
   * [Floyd Warshall](./Algorithms/Floyd_Warshall.cpp)  | [notes](./Algorithms/Floyd-Warshall.md)
-  * [DFS & BFS](./Algorithms/dfs_bfs.cpp)
 * [Problems](./Problems)
   * [Discount on crackers](https://www.codechef.com/problems/ACM14KG3) | [Solution](https://github.com/KJSCE-Codecell/Graph-notes/blob/master/Problems/ACM14KG3.cpp)
   * [Skiing](https://www.codechef.com/problems/SKIING) | [Solution](https://github.com/KJSCE-Codecell/Graph-notes/blob/master/Problems/SKIING.cpp)
