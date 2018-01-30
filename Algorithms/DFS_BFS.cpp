@@ -51,7 +51,7 @@ void bfs(int start)
     // if current node isn't marked already visit it
     if(!visited[current])
     {
-      cout<<current<<" ";
+      cout<<current<<" ";4
       visited[current]=1;
     }
     
@@ -74,19 +74,15 @@ void bfs(int start)
 
 int main()
 {
-  int n,i,j,k,node,start;
-  cout<<"Enter no of nodes in a graph";
-  cin>>n;
-  for(i=1;i<=n;i++)
+  int n,i,j,k,node,start,edges,u1,v1;
+  cout<<"Enter no of nodes and edges in a graph";
+  cin>>n>>edges;
+  for(i=1;i<=edges;i++)
   {
-    cout<<"Enter no of adjacent nodes"<<endl;
-    cin>>k;
-    cout<<"Enter the adjacent nodes"<<endl;
-    for(j=0;j<k;j++)
-    {
-      cin>>node;
-      v[i].push_back(node);
-    }
+    cout<<"Enter the pair of nodes having an edge"<<endl;
+    cin>>u1>>v1;
+    v[u1].push_back(v1);
+    v[v1].push_back(u1);
   }
   cout<<"Enter the starting node:";
   cin>>start;
